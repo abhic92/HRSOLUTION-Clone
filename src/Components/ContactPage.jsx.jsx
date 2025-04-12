@@ -1,17 +1,28 @@
 import React from 'react';
+import contactpic from "../assets/contactpic.avif";
 
 const ContactPage = () => {
   return (
     <div className="bg-gray-100 py-16 min-h-screen flex items-center justify-center">
-      <div className="max-w-md bg-white rounded-lg shadow-xl overflow-hidden">
-        <div className="bg-blue-600 text-white py-6 px-8">
-          <h2 className="text-3xl font-semibold text-center">Get in Touch</h2>
-          <p className="mt-2 text-lg text-gray-200 text-center">
-            Feel free to contact us for any kind of HR solution. We will get back to you
-            at the earliest with the support you need.
-          </p>
+      <div className="max-w-md bg-white rounded-lg shadow-xl overflow-hidden flex">
+        {/* Image Section (Left - Adjust width as needed) */}
+        <div className="w-1/2">
+          <img
+            src={contactpic} // Replace with the actual URL of your image
+            alt="Contact Us"
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className="p-8">
+
+        {/* Form Section (Right) */}
+        <div className="w-1/2 p-8">
+          <div className="text-blue-600 mb-4">
+            <h2 className="text-3xl font-semibold">Get in Touch</h2>
+            <p className="mt-2 text-lg text-gray-600">
+              Feel free to contact us for any kind of HR solution. We will get back to you
+              at the earliest with the support you need.
+            </p>
+          </div>
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Name</label>
